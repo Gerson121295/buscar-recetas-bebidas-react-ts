@@ -1,73 +1,41 @@
-# React + TypeScript + Vite
+# Buscador de Recetas de bebidas
+### React y TypeScript - La Guía Completa Creando +10 Proyectos -
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🍹 Descripción del Proyecto
 
-Currently, two official plugins are available:
+Aplicación web para buscar recetas de bebidas construida con React y TypeScript. Permite explorar diferentes bebidas, ver sus ingredientes y modo de preparación a través de una interfaz intuitiva y responsive.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tecnologías y Herramientas
 
-## React Compiler
+- **Frontend Framework**: React 18
+- **Lenguaje**: TypeScript
+- **Enrutamiento**: React Router DOM
+- **State Management**: Zustand con Slice Pattern
+- **Validaciones**: Zod/Formik
+- **Estilos**: CSS/Tailwind CSS (si aplica)
+- **Herramientas de Desarrollo**: Vite
+- **Control de Versiones**: Git
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## ✨ Características Principales
 
-## Expanding the ESLint configuration
+- ✅ Múltiples páginas navegables
+- ✅ Buscador de recetas de bebidas
+- ✅ Gestión de estado con Zustand
+- ✅ Validaciones de formularios
+- ✅ Interfaz responsiva
+- ✅ Arquitectura escalable con Slice Pattern
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Instalación
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+git clone https://github.com/Gerson121295/buscar-recetas-bebidas-react-ts.git
+cd buscar-recetas-bebidas-react-ts
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 👨‍💻 Autor
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+[Gerson121295](https://github.com/Gerson121295)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+
