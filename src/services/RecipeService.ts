@@ -1,12 +1,14 @@
 import axios from "axios"
+import api from "../lib/axios"
 import { CategoriesAPIResponseSchema, DrinksAPIResponse, RecipeAPIResponseSchema } from "../utils/recipes-schema"
 import type { Drink, SearchFilter } from "../types"
 
 
 export const getCategories = async () => {
 //export async function getCategories(){
-    const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
-    const { data } = await axios(url)
+    //const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'   //F1-Agregando la ruta completa
+    const url = '/list.php?c=list' //Agrega solo la ruta de list categorias
+    const { data } = await api(url) //Llama al api que contiene la ruta principal y le asigna la url de list categories
     
     //Valida data que devuelve la API con el tipado definido para la respuesta en CategoriesAPIResponseSchema
     const result = CategoriesAPIResponseSchema.safeParse(data);
